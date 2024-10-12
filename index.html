@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 50%;
+        height: 80vh;
+      }
+
+      .swiper-slide{
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(234, 170, 190);
+        border-radius: 20px;
+      }
+      .swiper-slide img:hover {
+        transform: rotateZ(20deg);
+        perspective: 1000px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="container-header">
+        <div class="container-logo">
+          <img src="./logo.png" alt="" />
+        </div>
+        <nav class="container-navbar">
+          <ul class="container-navbar-ul">
+            <li>
+              <a href="#"><i class="bi bi-search"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-bag"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-list"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="row">
+        <div class="column-1">
+          <h1>
+            NIKE
+            <hr />
+            AIR SPORTS
+          </h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptates, magni excepturi necessitatibus consequatur corporis sint
+            accusantium quisquam rem ducimus eaque!
+          </p>
+          <div class="buttons">
+            <button class="btn">ADD TO CARD</button>
+            <button class="btn">CATEGORIES</button>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./nike-b.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./nike-g.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./nike-s.png" alt="" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
